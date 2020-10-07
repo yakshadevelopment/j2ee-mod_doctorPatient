@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID">
+	<display-name>mod_doctorPatient</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+    <servlet-name>index</servlet-name>
+    <jsp-file>/WEB-INF/views/index.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>index</servlet-name>
+    <url-pattern>/index.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PatientEntry</servlet-name>
+    <jsp-file>/WEB-INF/views/PatientEntry.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientEntry</servlet-name>
+    <url-pattern>/PatientEntry.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PatientView</servlet-name>
+    <jsp-file>/WEB-INF/views/PatientView.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>PatientServlet</display-name>
+  	<servlet-name>PatientServlet</servlet-name>
+  	<servlet-class>mod_doctorPatient.PatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientView</servlet-name>
+    <url-pattern>/PatientView.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PatientServlet</servlet-name>
+  	<url-pattern>/PatientServlet</url-pattern>
+  </servlet-mapping>
+	
+	
+</web-app>
